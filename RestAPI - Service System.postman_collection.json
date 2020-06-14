@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "eb2246c3-24eb-4aaf-86c3-a89aed5918fa",
+		"name": "RestAPI - Service System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3990/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3990",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Thiago Collet e Silva Hilpert\",\n    \"email\": \"Thiago@agenciath2.com.br\",\n    \"password\": \"12345\",\n    \"role\": \"Administrador\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3990/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3990",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3990/api/users/5ee634f19a45f2e937263f52",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3990",
+							"path": [
+								"api",
+								"users",
+								"5ee634f19a45f2e937263f52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Thiago Collet e Silva Hilpert updated\",\n    \"email\": \"Thiago@agenciath2.com.br\",\n    \"password\": \"123453456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3990/api/users/5ee61aca5f9064e443915e91",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3990",
+							"path": [
+								"api",
+								"users",
+								"5ee61aca5f9064e443915e91"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "\n",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"thiago@agenciath2.com.br\",\n    \"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3990/api/authenticate/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3990",
+							"path": [
+								"api",
+								"authenticate",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
