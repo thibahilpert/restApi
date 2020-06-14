@@ -20,8 +20,6 @@ const crud = (crud) => {
   const post = async (req, res, next) => {
     try {
       const item = await crud.create(req.body);
-
-      item.password = undefined;
       res.json(item);
     } catch (err) {
       next(err);

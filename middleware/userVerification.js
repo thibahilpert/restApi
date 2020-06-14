@@ -1,4 +1,4 @@
-const userModel = require('../models/user/userModel');
+const userModel = require("../models/user/userModel");
 
 const userVerification = async (req, res, next) => {
     const { email } = req.body;

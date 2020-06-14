@@ -1,9 +1,4 @@
-const bcrypt = require("bcrypt");
-
-const encryptPassword = async (password) => {
-  const salt = await bcrypt.genSalt(10);
-  return bcrypt.hash(password, salt);
-};
+const { encryptPassword } = require("../utils");
 
 const encryptPasswordMiddleware = async (req, res, next) => {
   if (req.body && !!req.body.password) {
