@@ -1,6 +1,7 @@
 const ROLES = Object.freeze({
-  MASTER: 'master',
-  GUEST: 'visitante'
+  MASTER: 'Administrador',
+  MANAGER: 'Gerente',
+  INTERN: 'Estagiário'
 });
 
 const TABLES = Object.freeze({

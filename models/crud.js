@@ -21,6 +21,7 @@ const crud = (crud) => {
     try {
       const item = await crud.create(req.body);
 
+      item.password = undefined;
       res.json(item);
     } catch (err) {
       next(err);
