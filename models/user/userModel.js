@@ -23,15 +23,15 @@ const userSchema = new Schema(
         },
         role: {
             type: String,
-            default: ROLES.GUEST,
-        },
+            default: ROLES.GUEST
+        }
     },
     {
         timestamps: {
             createdAt: 'created_at',
             updatedAt: 'updated_at'
-        },
-    },
+        }
+    }
 )
 
 module.exports = mongoose.model(TABLES.USER, userSchema);
