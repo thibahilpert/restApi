@@ -5,7 +5,6 @@ const userVerification = async (req, res, next) => {
     if( await userModel.findOne( { email } ) ){
         return res.status(400).send( { error: 'User already exists, try another email' } );
     }else{
-        userModel.password = undefined;
         next();
     }
 }
