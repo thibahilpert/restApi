@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("../../database/dbconnection");
 
 const { TABLES, ROLES } = require("../constants");
 
