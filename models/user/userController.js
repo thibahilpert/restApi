@@ -4,7 +4,7 @@ const { serializeToken } = require("../../utils");
 
 let userCrud = crud(userModel);
 
-userCrud.post = async (req, res, next) => {
+userCrud.post = async (req, res) => {
   try {
     const item = await userModel.create(req.body);
 
@@ -19,6 +19,16 @@ userCrud.post = async (req, res, next) => {
         item,
         token
     });
+  } catch (err) {
+    next(err);
+  }
+};
+
+userCrud.getAllToken = async (req, res, next) => {
+  try {
+    const items = await userModel.find();
+    res.json(items);
+    // res.send({ user: req.userId });
   } catch (err) {
     next(err);
   }
